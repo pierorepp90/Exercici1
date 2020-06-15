@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exercici 1 Fase 4</title>
+</head>
+<body>
+
+<p id="output1"></p>
+<p id="output2"></p>
+<p id="output3"></p>
+
+<script type="text/javascript">
+
+var nom, cognom1, cognom2, fullname;
+nom = "Piero";
+cognom1 = "Reppucci";
+cognom2 = "";
+fullname = nom + " " + cognom1 + " " + cognom2 ;
+
+var dia, mes, any, date;
+dia = 24;
+mes = 8;
+any = 1990;
+date = dia + "/" + mes + "/" + any
+
+document.getElementById("output1").innerHTML = "Mi nombre es " + fullname;
+
+document.getElementById("output2").innerHTML = "Nacido " + date;
+var anyTraspas = 1948;
+var cadaQuanTraspas = 4;
+/*var text = "Los años bisiestos son: ";
+for(i = anyTraspas; i <= any ; i++){
+	if(i % cadaQuanTraspas == 0){
+		text += i + " ";
+	}
+
+}
+document.getElementById("output").innerHTML = text ;*/
+
+var anyTraspas = "Mi año de nacimiento es bisiesto";
+var anyNoTraspas = "Mi año de nacimiento NO es bisiesto";
+var isTraspas;
+
+if(any % cadaQuanTraspas == 0){
+	isTraspas = true ;
+}
+
+if(isTraspas){
+	document.getElementById("output3").innerHTML = anyTraspas ;
+}
+else{
+	document.getElementById("output3").innerHTML = anyNoTraspas ;
+}
+
+</script>
+</body>
+</html>
